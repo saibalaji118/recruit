@@ -3,8 +3,10 @@ from datetime import datetime
 from sqlalchemy import MetaData, create_engine
 from flask_cors import CORS
 from application import app
+import constants
 
-uri = "postgresql://saibalaji:RbgceTFY04sorWYVOIDL@database-1.c6l9b0w4xvbk.ap-south-1.rds.amazonaws.com:5432/my_first_db"
+
+uri = constants.uri
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
