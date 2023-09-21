@@ -9,10 +9,8 @@ PyJWT
 boto3
 pandas
 requests
-pdfminer.high_level
-tempfile
+pdfminer.six 
 uuid
-io
-os
-json
-docx
+python-docx
+Flask-Mail
+Flask-Bcrypt
