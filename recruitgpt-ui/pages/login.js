@@ -2,7 +2,7 @@ import Head from "next/head";
 import {motion} from "framer-motion";
 import {useEffect, useState, useCallback} from "react";
 import { isLoggedin, login } from "/utility/auth.js";
-import BACKEND_URL from "../utility/constants.js";
+import {BACKEND_URL, client_id} from "../utility/constants.js";
 import { useRouter } from 'next/router.js';
 import NextScript from 'next/script';
 
@@ -29,7 +29,7 @@ const Login = ({type}) => {
   
         const params = {
           response_type: 'code',
-          client_id: '261556906858-c2hjrvajb4cn3jb95dl3g81tepb3d2r1.apps.googleusercontent.com',
+          client_id: client_id,
           // need to change
           redirect_uri: `http://127.0.0.1:5000/login`,
           prompt: 'select_account',
