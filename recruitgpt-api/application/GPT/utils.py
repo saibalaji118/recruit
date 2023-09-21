@@ -3,7 +3,6 @@ import os
 import docx
 import openai
 import constants
-import streamlit as st
 
 openai.api_key = constants.OPENAI_API_KEY
 
@@ -30,7 +29,6 @@ class Utils:
             return text
         except Exception as e:
             print(f"Error converting file {file_path} to text: {e}")
-            st.error(f"Error converting file {file_path} to text: {e}")
             return ""
     def convert_pdf_to_text2(file_path):
         try:
@@ -70,7 +68,6 @@ class Utils:
             return choice_text
         except Exception as e:
             print("Error in get_choice_text_from_prompt:", str(e))
-            st.error(f"Error communicating with OpenAI: {e}")
             return ""
         
     def truncate_text_by_words(text, max_words=4000):
