@@ -1,0 +1,17 @@
+
+openai==0.27.6
+Flask-Cors==3.0.10
+Flask==2.3.2                    
+Flask-SQLAlchemy==3.0.3       
+psycopg2-binary==2.9.6
+PyJWT
+boto3
+pandas
+requests
+pdfminer.high_level
+tempfile
+uuid
+io
+os
+json
+docx
