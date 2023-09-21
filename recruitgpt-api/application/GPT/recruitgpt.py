@@ -16,6 +16,7 @@ import io
 from database import UserSession
 from database import db
 from datetime import datetime
+import constants 
 
 
 # def gpt_token_counts(text):
@@ -23,10 +24,10 @@ from datetime import datetime
 #     num_tokens = len(list(tokenizer.tokenize(text)))
 #     # st.write('Num of Tokens: ', num_tokens)
 
-aws_access_key = 'AKIAUQPAYGWC5PWLWY7U'
-aws_secret_key = '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'
-bucket_name = 'my-bucket-onfocus'
-bucket_region = 'ap-south-1'
+aws_access_key = constants.aws_access_key
+aws_secret_key = constants.aws_secret_key
+bucket_name = constants.bucket_name
+bucket_region = constants.bucket_region
 s3_client = boto3.client('s3', aws_access_key_id=aws_access_key, aws_secret_access_key=aws_secret_key)
 result_link=''
     
