@@ -90,8 +90,9 @@ def login():
         return jsonify({'error': 'Invalid request'}), 400
     
     token_endpoint = 'https://oauth2.googleapis.com/token'
-    client_id = '261556906858-c2hjrvajb4cn3jb95dl3g81tepb3d2r1.apps.googleusercontent.com'
-    client_secret = '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'
+
+    client_id = constants.client_id
+    client_secret = constants.client_secret
 
     ############# Change ##################
     redirect_uri = 'http://127.0.0.1:5000/login'
